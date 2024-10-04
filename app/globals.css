@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ededed;
+  --foreground: #333;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111827;
+    --foreground: #ededed;
+  }
+}
+
+/* Dark mode styles */
+body.dark {
+  --background: #111827; /* Dark background */
+  --foreground: #ededed; /* Light foreground */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease, color 0.10s ease; /* Smooth transition */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
